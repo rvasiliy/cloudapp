@@ -1,3 +1,3 @@
 export default async function home(ctx) {
-    ctx.body = Math.random();
+   await ctx.render('home', {value: Math.random()});
 }

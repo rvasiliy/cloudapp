@@ -4,16 +4,21 @@ import { fileURLToPath } from 'node:url';
 
 import 'dotenv/config.js';
 import Koa from 'koa';
+import Pug from 'koa-pug';
 import serve from 'koa-static';
 import router from './router.js';
 
 const PORT = env.PORT || 8080;
 const HOST = env.HOST || 'localhost';
-const PUBLIC_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../public');
+const ROOT_PATH = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
 const app = new Koa();
+app.use(serve(resolve(ROOT_PATH, './public'), {})).use(router.routes());
 
-app.use(serve(PUBLIC_ROOT, {})).use(router.routes());
+new Pug({
+  app,
+  viewPath: resolve(ROOT_PATH, './src/views')
+});
 
 app.listen(PORT, HOST, () => {
   console.log(`Listening https://${HOST}:${PORT}/`);
