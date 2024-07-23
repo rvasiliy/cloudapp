@@ -1,0 +1,12 @@
+name: sentry
+
+services:
+  app:
+    build:
+      context: .
+    container_name: app
+    ports:
+      - 42301:${PORT}
+    volumes:
+      - ./:/app
+    command: npm run serve
