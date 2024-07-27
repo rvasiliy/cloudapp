@@ -1,5 +1,5 @@
 export default class App {
-    mount(root) {
-        root.insertAdjacentHTML('afterbegin', '<div class="wrap"></div>')
-    }
+  mount(root) {
+    root.insertAdjacentHTML('afterbegin', '<div class="wrap"></div>');
+  }
 }

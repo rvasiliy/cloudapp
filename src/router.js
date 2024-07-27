@@ -1,5 +1,5 @@
 import Router from '@koa/router';
-import home from "./pages/home.js";
+import home from './pages/home.js';
 
 const router = new Router();
 

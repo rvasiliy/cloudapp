@@ -26,9 +26,7 @@ export default {
     port: 42301,
   },
   module: {
-    rules: [
-      {test: /\.css$/, use: ['style-loader', 'css-loader']}
-    ],
+    rules: [{ test: /\.css$/, use: ['style-loader', 'css-loader'] }],
   },
   resolve: {
     modules: ['node_modules', path.resolve(ROOT, './src-ui')],

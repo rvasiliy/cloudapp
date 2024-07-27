@@ -17,7 +17,7 @@ app.use(serve(resolve(ROOT_PATH, './public'), {})).use(router.routes());
 
 new Pug({
   app,
-  viewPath: resolve(ROOT_PATH, './src/views')
+  viewPath: resolve(ROOT_PATH, './src/views'),
 });
 
 app.listen(PORT, HOST, () => {
