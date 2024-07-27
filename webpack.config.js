@@ -43,7 +43,7 @@ export default {
       patterns: [{ from: './src-ui/favicon.ico', to: 'favicon.ico', toType: 'file' }],
     }),
     sentryWebpackPlugin({
-      org: env.SENTRY_ORGANIZATION,
+      org: env.SENTRY_ORG,
       project: env.SENTRY_PROJECT,
       authToken: env.SENTRY_AUTH_TOKEN,
       release: {
