@@ -7,7 +7,8 @@
   "private": true,
   "scripts": {
     "start": "node src/index.js",
-    "serve": "nodemon src/index.js"
+    "serve": "nodemon src/index.js",
+    "build": "webpack"
   },
   "dependencies": {
     "@koa/router": "^12.0.1",
@@ -17,8 +18,11 @@
     "koa-static": "^5.0.0"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^12.0.2",
     "nodemon": "^3.1.4",
-    "prettier": "^3.3.3"
+    "prettier": "^3.3.3",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
   },
   "engines": {
     "node": ">=16"
