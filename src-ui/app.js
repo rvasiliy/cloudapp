@@ -1,9 +1,7 @@
+import { sum } from './shared/sum.js';
+
 export default class App {
   mount(root) {
-    root.insertAdjacentHTML('afterbegin', '<div class="wrap"></div>');
-
-    setTimeout(() => {
-      throw Error('Test error');
-    }, 1000)
+    root.insertAdjacentHTML('afterbegin', `<div class="wrap">${sum('1', 2)}</div>`);
   }
 }
